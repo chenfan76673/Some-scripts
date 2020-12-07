@@ -61,4 +61,4 @@ def exec_cmd(IP,command)
 exec_cmd(hosts,command_1)
 exex_cmd(zdserver,command_2)
 exec_cmd(zdclient,command_3)
-
+#还未验证，等待小心验证
