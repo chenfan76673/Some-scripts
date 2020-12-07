@@ -4,8 +4,8 @@ import os
 import paramiko
 import ConfigParser
 
+#通过zettakit.conf文件获取存储monitor节点以及计算节点
 cf = ConfigParser.ConfigParser()
-
 cf.read("/etc/zettakit/zettakit.conf")
 
 zdserver =  cf.get("storage","mon_ips").split(",")
@@ -13,6 +13,7 @@ zdclient = cf.get("compute","compute").split(",")
 hosts = cf.get("cluster","ips").split(",")
 
 """
+这是通过/etc/hosts文件获取集群ip信息。
 def get_hosts():
     hosts=[]
     with open('/etc/hosts') as f:
